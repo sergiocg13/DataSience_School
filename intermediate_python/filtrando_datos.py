@@ -73,6 +73,7 @@ DATA = [
 
 
 def run():
+    # filtros con list comprehensions
     all_python_devs = [worker['name'] for worker in DATA if 
                     worker['language'] == 'python']
 
@@ -87,16 +88,22 @@ def run():
     for worker in all_platzi_workers:
         print(worker)
 
-#filtros con list_comprehensios y las funciones filter, map y reduce
+#filtros con high order functions, con las funciones filter, map y reduce
     # Listamos  a las personas mayores de 18 años
     # Imprime los datos completos de todas las personas en el diccionario
     adults = list(filter(lambda person: person ['age'] > 18, DATA))
     # Sobre escribimos la variable adults, para listar unicamente los nombres
     # del diccionario mayores de 18 años
     adults = list(map(lambda person: person['name'], adults))
-    old = list(reduce(lambda person))
-
+    #output con los nombres de las personas mayores de 18 años en DATA
     for person in adults:
+        print(person)
+
+    #agregar llave old dentro del diccionario DATA, si es mayor o menor a 70 años
+    #usamos el simbolo | (pipe) para sumar la nueva llave old
+    old_people= list(map(lambda person: person | {'old': person['age']>70}, DATA))
+    #output con nueva llave old
+    for person in old_people:
         print(person)
 
 if __name__=='__main__':
