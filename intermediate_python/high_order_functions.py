@@ -49,7 +49,9 @@ squares = list(map(lambda x: x**2, my_list2))
 print(squares)
 
 
-# Reduce toma 2 valores entregados como parámetros y el iterador como otro parámetro. Realiza la función con estos 2 valores, y luego con el resultado de esto y el valor que le sigue en el array. Y así hasta pasar por todos los valores de la lista.
+# Reduce toma 2 valores entregados como parámetros y el iterador como otro 
+# parámetro. Realiza la función con estos 2 valores, y luego con el resultado
+# de esto y el valor que le sigue en el array. Y así hasta pasar por todos los valores de la lista.
 
 # multiplicar todos los elementos de una lista(resultado debe ser 32):
 my_list3 = [2,2,2,2,2]
